@@ -40,10 +40,18 @@ body {
   background-color: var(--card-dark-blue);
 }
 
-.card-img {
+.card-img-box {
+  background-color: white;
   width: 100%;
-  border-radius: 11px;
+  position: relative;
   margin-bottom: 2.4rem;
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 11px;
 }
 
 .card-content {
@@ -52,11 +60,39 @@ body {
   margin-bottom: 2rem;
 }
 
+.eye-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(178, 100%, 50%, 0.5);
+  border-radius: 11px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.eye-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.eye-container:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
 .card-title {
   font-size: 2.2rem;
   color: var(--white);
   margin-bottom: 2rem;
   font-weight: 600;
+}
+
+.card-title:hover {
+  color: var(--cyan);
+  cursor: pointer;
 }
 
 .card-text {
